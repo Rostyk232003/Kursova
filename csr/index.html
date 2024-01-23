@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Categories List</title>
+        <link href="../assets/style.css" rel="stylesheet" />
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <div class='container' id="contentContainer">
+            
+            <div class='navigation'>
+                <form id="searchForm">
+                    <input type="text" name="search" id="searchInput" required/>
+                    <button type="submit">Пошук</button>
+                </form>
+                <ul>
+                    <li><a id="tabletLink" href="#">Графічні планшети</a></li>
+                    <li><a id="vendorLink" href="#">Виробники</a></li>
+                    <li><a id="categoryLink" href="#">Категорії</a></li>
+                    <li><a id="propertyLink" href="#">Властивості</a></li>
+                    <li><a id="logoutLink" href="#">Вийти</a></li>
+                </ul>
+            </div>
+            <div class='table-content'>
+                    <h1 id="pageHeader">Категорії</h1>
+                    <table id="dataTable">
+                        
+                    </table>
+            </div>
+            <div class='form-content'>
+                <form method="POST" id="categoryForm" class="app-form">
+                    <p><input type="text" id="categoryNameInput" placeholder="Назва" name="name" required/></p>
+                    <input type="hidden" id="categoryIdInput" value=""/>
+                    <p><button type="submit">Зберегти</button></p>
+                    <p id="categoryErrorText" class="color"></p>
+                    <p id="categoryDeleteErrorText" class="color"></p>
+                </form>
+                <form method="POST" id="vendorForm" class="app-form">
+                    <p><input type="text" id="vendorNameInput" placeholder="Назва" name="vendor" required/></p>
+                    <input type="hidden" id="vendorIdInput" value=""/>
+                    <p><button type="submit">Зберегти</button></p>
+                    <p id="vendorErrorText" class="color"></p>
+                    <p id="vendorDeleteErrorText" class="color"></p>
+                </form>
+                <form method="POST" id="propertyForm" class="app-form">
+                    <p><input type="text" id="propertyNameInput" placeholder="Назва" name="name" required/></p>
+                    <p><input type="text" id="propertyUnitsInput" placeholder="Одиниці вимірювання" name="units" required/></p>
+                    <input type="hidden" id="propertyIdInput" value=""/>
+                    <p><button type="submit">Зберегти</button></p>
+                    <p id="propertyErrorText" class="color"></p>
+                    <p id="propertyDeleteErrorText" class="color"></p>
+                </form>
+                <form method="POST" id="tabletForm" class="app-form">
+                    <p><select id="tabletVendorInput"></select> </p>
+                    <p><input type="text" id="tabletNameInput" placeholder="Модель" name="name" required/></p>
+                    <p><select id="tabletCategoryInput"></select> </p>
+                    <p><input type="text" id="tabletPriceInput" placeholder="Ціна" name="price" required/></p>
+                    <input type="hidden" id="tabletIdInput" value=""/>
+                    <div id="propInputsContainer"></div>
+                    <p><button type="submit">Зберегти</button></p>
+                </form>
+            </div>
+        </div>
+        <div class='container' id="loginContainer">
+            <div class='form-content'>
+                <h1>Вхід</h1>
+                <form method="POST" id="loginForm">
+                    <p><input type="text" placeholder="Логін" id="loginInput" name="login" required/></p>
+                    <p><input type="password" placeholder="Пароль" id="passwordInput" name="password" required/></p>
+                    <p><button type="submit">Увійти</button></p>
+                    <p id="loginErrorText" class="color"></p>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="../assets/main-csr.js"></script>
+</html>
